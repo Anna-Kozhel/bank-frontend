@@ -1,0 +1,107 @@
+<div class="queue">
+  <p>{{printDate(0)}}</p>
+  <table class="table">
+    <thead>
+      <tr class="headlines">
+        <th scope="col">№</th>
+        <th  scope="col">Прізвище</th>
+        <th  scope="col">Ім'я</th>
+        <th  scope="col">По батькові</th>
+        <th  scope="col">Час запису</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of divideDataByDate(0); let i = index">
+      <tr>
+        <td>{{i + 1}}</td>
+        <td>{{item.surname}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.middleName}}</td>
+        <td>{{item.time}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>{{printDate(1)}}</p>
+  <table class="table">
+    <thead>
+    <tr class="headlines">
+      <th scope="col">№</th>
+      <th  scope="col">Прізвище</th>
+      <th  scope="col">Ім'я</th>
+      <th  scope="col">По батькові</th>
+      <th  scope="col">Час запису</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of divideDataByDate(1); let i = index">
+    <tr>
+      <td>{{i + 1}}</td>
+      <td>{{item.surname}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.middleName}}</td>
+      <td>{{item.time}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <p>{{printDate(2)}}</p>
+  <table class="table">
+    <thead>
+    <tr class="headlines">
+      <th scope="col">№</th>
+      <th  scope="col">Прізвище</th>
+      <th  scope="col">Ім'я</th>
+      <th  scope="col">По батькові</th>
+      <th  scope="col">Час запису</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of divideDataByDate(2); let i = index">
+    <tr>
+      <td>{{i + 1}}</td>
+      <td>{{item.surname}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.middleName}}</td>
+      <td>{{item.time}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <p>{{printDate(3)}}</p>
+  <table class="table">
+    <thead>
+    <tr class="headlines">
+      <th scope="col">№</th>
+      <th  scope="col">Прізвище</th>
+      <th  scope="col">Ім'я</th>
+      <th  scope="col">По батькові</th>
+      <th  scope="col">Час запису</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of divideDataByDate(3); let i = index">
+    <tr>
+      <td>{{i + 1}}</td>
+      <td>{{item.surname}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.middleName}}</td>
+      <td>{{item.time}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <p>{{printDate(4)}}</p>
+  <table class="table">
+    <thead>
+    <tr class="headlines">
+      <th scope="col">№</th>
+      <th  scope="col">Прізвище</th>
+      <th  scope="col">Ім'я</th>
+      <th  scope="col">По батькові</th>
+      <th  scope="col">Час запису</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of divideDataByDate(4); let i = index">
+    <tr>
+      <td>{{i + 1}}</td>
+      <td>{{item.surname}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.middleName}}</td>
+      <td>{{item.time}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,220 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65vw;
+  height: auto;
+  max-width: 1200px;
+  min-width: 300px;
+  background-color: rgba(255, 255, 255, 50%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px;
+  border-radius: 30px;
+  width: 95%;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Bahnschrift;
+}
+
+
+hr {
+  width: 80%;
+  height: 1px;
+  background-color: white;;
+  margin-top: 35px;
+}
+
+.card p {
+  margin: 0 5%;
+}
+
+.buttons {
+  margin: 20px;
+  width: 90%;
+}
+
+button {
+  background-color: rgb(232, 93, 86);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin: 5px;
+  font-size: 16px;
+  font-family: Bahnschrift;
+  color: white;
+}
+
+button:active {
+  background-color: rgb(216, 99, 93);
+  color: white;
+}
+
+.buttons button {
+  width: auto;
+  height: 30px;
+}
+
+.queue {
+  width: 95%;
+  height: 50px;
+}
+
+.queue button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 95%;
+  height: auto;
+  margin: 15px 0 5vh;
+}
+
+@media screen and (max-width: 730px) {
+  .news {
+    flex-wrap: wrap;
+  }
+}
+
+.newFirst {
+  margin: 0 15px 0 0;
+  border-radius: 30px;
+  width: 45%;
+  min-width: 270px;
+  height: 44vh;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Bahnschrift;
+}
+
+.newSecond {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  margin: 5px 0;
+  border-radius: 30px;
+  width: 100%;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  text-align: center;
+  font-family: Bahnschrift;
+}
+
+.seconds{
+  display: flex;
+  flex-direction: column;
+  width: 52.5%;
+  height: 44.5vh;
+}
+
+@media screen and (max-width: 730px) {
+  .seconds{
+    width: 96%;
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .newFirst {
+    width: 100%;
+    height:auto;
+    margin: 0 10px 10px 10px;
+  }
+
+  .newSecond {
+    margin: 10px;
+    width: 100%;
+  }
+}
+
+.checkCanceling {
+  display: block;
+  width: calc(30% + 5vh);
+  height: calc(1.5em + .75rem + 2px);
+  padding: 0 .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(216, 99, 93);
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid  rgb(216, 99, 93);
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  margin:1.5vw calc(1.5vh - 0.5vw) 0 calc(1.5vh - 0.5vw);
+}
+
+.newFirst table {
+  width: 90%;
+  margin: 10% 5%;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-spacing: 0;
+  border-radius: 6px;
+}
+
+.newFirst table td, .newFirst table tr {
+  padding: .75rem;
+  vertical-align: top;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.emailIcon {
+  max-width: 100px;
+  width: 30%;
+  height: auto;
+  margin: 5%;
+}
+
+.emailText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.emailText p {
+  font-family: Bahnschrift;
+  font-size: 15px;
+  margin: 5px 5px 5px 0;
+}
+
+.highlight {
+  color: rgb(216, 99, 93) !important;
+  font-size: 16px !important;
+}
+
+@media screen and (max-width: 730px) {
+  .highlight {
+    font-size: 3vw !important;
+  }
+  .emailText p {
+    font-size:  3vw;
+  }
+}
+
+@media screen and (max-width: 950px) and (min-width: 730px) {
+  .highlight {
+    font-size: 60% !important;
+  }
+  .emailText p {
+    font-size:  60%;
+  }
+}

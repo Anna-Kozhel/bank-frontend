@@ -1,0 +1,81 @@
+<div class="main">
+  <div class="card" *ngIf="!isCancelApplication">
+    <hr>
+    <h1>Шановні відвідувачі!</h1>
+    <p>У разі виникнення проблем з здійсненням запису чи його скасуванням звертайтесь на пошту @gmail.com</p>
+    <div class="buttons">
+      <button (click)="routeApplication()">Здійснити запис</button>
+      <button (click)="cancelApplication()">Скасувати запис</button>
+    </div>
+  </div>
+
+  <div class="card" *ngIf="isCancelApplication">
+    <hr>
+    <h1>Шановний відвідувачу!</h1>
+    <p>Якщо Ви бажаєте скасувати свій візит, Вам необхідно ввести номер вашого чека, який був надісланий Вам на пошту
+      при реєстрації.</p>
+    <input [(ngModel)]="checkNumber" class="checkCanceling" placeholder="*******"/>
+    <div class="buttons">
+      <button (click)="cancelApplication()" >Скасувати</button>
+      <button (click)="cancelQueue()" [disabled]="checkNumber == '' || checkNumber.length < 8">Підтвердити</button>
+    </div>
+  </div>
+
+  <div class="queue">
+    <button (click)=routeToQueues()>Онлайн черги</button>
+  </div>
+
+  <div class="news">
+    <div class="newFirst">
+      <table>
+        <tr>
+          <td>Понеділок</td>
+          <td>09:00–18:00</td>
+        </tr>
+        <tr>
+          <td>Вівторок</td>
+          <td>09:00–18:00</td>
+        </tr>
+        <tr>
+          <td>Середа</td>
+          <td>09:00–18:00</td>
+        </tr>
+        <tr>
+          <td>Четвер</td>
+          <td>09:00–18:00</td>
+        </tr>
+        <tr>
+          <td>П'ятниця</td>
+          <td>09:00–18:00</td>
+        </tr>
+        <tr>
+          <td>Субота</td>
+          <td>Вихідний</td>
+        </tr>
+        <tr>
+          <td>Неділя</td>
+          <td>Вихідний</td>
+        </tr>
+      </table>
+    </div>
+    <div class="seconds">
+      <div class="newSecond">
+        <img src="/assets/imgs/email.svg" class="emailIcon">
+        <div class="emailText">
+          <p>В разі виниклення проблем пишіть нам на пошту:</p>
+          <p class="highlight">angularsent@gmail.com</p>
+        </div>
+      </div>
+      <div class="newSecond">
+        <img src="/assets/imgs/call.svg" class="emailIcon">
+        <div class="emailText">
+          <p>В разі виниклення проблем пишіть нам на пошту:</p>
+          <p class="highlight">+38 (0**) ** ** ***</p>
+        </div>
+      </div>
+    </div>
+    <div>
+
+    </div>
+  </div>
+</div>

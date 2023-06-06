@@ -1,0 +1,254 @@
+.applicationForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(240, 240, 240);
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 60%;
+  min-height: 60vh;
+  max-width: 1000px;
+  min-width: 330px;
+  border-radius: 5px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+  background-color: rgb(232, 93, 86);
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.position {
+  position: absolute;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 50vh;
+  background: white;
+  border-radius: 0 0 0.25rem 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.specPosition {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  flex-direction: row !important;
+  width: 100%;
+}
+
+.placing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(50vh - 3vh - 35px);
+}
+
+.form {
+  display: block;
+  width: calc(30% + 5vh);
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  margin: calc(1.5vh - 0.5vw);
+}
+
+input {
+  height: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form {
+    transition: none
+  }
+}
+
+select option:hover {
+  background-color: rgb(232, 93, 86);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 1vh;
+  margin: 1vh 0.5vh;
+  width: 90%;
+}
+
+button {
+  background-color: rgb(232, 93, 86);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin: 2.5px;
+  font-size: 16px;
+  font-family: Bahnschrift;
+  color: white;
+}
+
+button:active {
+  background-color: rgb(216, 99, 93);
+  color: white;
+}
+
+.buttons button {
+  width: auto;
+  height: 35px;
+  min-width: 100px;
+}
+
+.indicator {
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+  background-color: rgb(73, 73, 73);
+  margin: 20px 10px;
+}
+
+.indicator:active {
+  background-color: rgb(73, 73, 73);
+}
+
+.done {
+  background-color: white;
+}
+
+.line {
+  width: 15%;
+  height: 2px;
+  background-color: rgb(73, 73, 73);
+  margin: 30px 2px;
+}
+
+.done2 {
+  background-color: white;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.date {
+  padding: 0;
+  height: calc(1.5em + .75rem + 2px) !important;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  width: calc(30% + 5vh + 25px);
+  padding: 0;
+  margin: 1.5vw 0;
+}
+
+.input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  height: calc(1.5em + .75rem + 2px);
+  padding: 0 10px;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  width: calc(50% + 5vh);
+}
+
+.noneList-group {
+  width: auto !important;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.noneList {
+  border: none;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.checks{
+  width: 90%;
+  margin: 1vh 0;
+}
+
+
+

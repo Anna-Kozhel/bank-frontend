@@ -1,0 +1,43 @@
+<div class="navbar">
+  <hr class="top">
+  <div class="departments">
+    <div>
+      <img src="../../../assets/imgs/bank.svg" class="logo">
+<!--      <p>Monetary</p>-->
+<!--      <p>Banking</p>-->
+<!--      <p>Institution</p>-->
+    </div>
+    <div>
+      <a routerLink="/main">Головна</a>
+    </div>
+    <div>
+      <a routerLink="/queues">Онлайн черги</a>
+    </div>
+    <div>
+      <a (click)="openDiv()" class="profile">
+        <img src="assets/imgs/profile.svg">
+      </a>
+      <div class="profileCard" *ngIf="isOpen">
+        <div  *ngIf="isEdit" class="profileInput">
+          <input class="form" [(ngModel)]="profile.name"/>
+          <input class="form" [(ngModel)]="profile.surname"/>
+          <input class="form" [(ngModel)]="profile.middleName"/>
+          <input class="form" [(ngModel)]="profile.email"/>
+          <input class="form" [(ngModel)]="profile.phoneNumber"/>
+        </div>
+        <div  class="profileText"  *ngIf="!isEdit">
+          <p>{{profile.name}}</p>
+          <p>{{profile.surname}}</p>
+          <p>{{profile.middleName}}</p>
+          <p>{{profile.email}}</p>
+          <p>{{profile.phoneNumber}}</p>
+        </div>
+        <div class="buttonsProfile">
+          <button (click)="openDiv()">Скасувати</button>
+          <button (click)="edit()">Редагувати</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="low">
+</div>

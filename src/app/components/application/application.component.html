@@ -1,0 +1,134 @@
+<div class="applicationForm">
+  <div class="component">
+
+    <div class="nav">
+      <button class="indicator" [class.done]="queue.service"></button>
+      <div class="line" [class.done2]="this.inProgress[0]"></div>
+      <button class="indicator" [class.done]="queue.data !== '' && queue.time !== ''"></button>
+      <div class="line" [class.done2]="this.inProgress[1]"></div>
+      <button
+        class="indicator"
+        [class.done]="
+        queue.name !== ''
+          && queue.surname !== ''
+          && queue.middleName !== ''
+          && queue.email !== ''
+          && queue.phoneNumber !== ''"></button>
+      <div class="line" [class.done2]="this.inProgress[2]"></div>
+      <button class="indicator" [class.done]="isSwitchOn1 && isSwitchOn2"></button>
+    </div>
+
+    <div class="position" *ngIf="component[0]">
+      <div class="placing">
+        <p>Оберіть послугу:</p>
+
+        <select class="form" id="operationType" [(ngModel)]="selectedTypeOperation">
+          <option value="0">Активні операції</option>
+          <option value="1">Пасивні операції</option>
+        </select>
+
+        <select class="form" *ngIf="selectedTypeOperation === '1'" [(ngModel)]="queue.service">
+          <option value="0">Грошові вклади з врахуванням різних валют</option>
+          <option value="3">Іпотека</option>
+          <option value="4">Індивідуальні сейфи</option>
+        </select>
+
+        <select class="form" *ngIf="selectedTypeOperation === '0'" [(ngModel)]="queue.service">
+          <option value="1" selected>Кредити</option>
+          <option value="2">Банківські/кредитні картки</option>
+          <option value="5">Платежі</option>
+          <option value="6">Прийом та видача готівки/пенсія</option>
+          <option value="7">Грошові перекази</option>
+          <option value="8">Валютно-обмінні операції</option>
+        </select>
+      </div>
+      <div class="buttons">
+        <button (click)="back(-1)">Скасувати</button>
+        <button (click)="next(1)">Далі</button>
+      </div>
+    </div>
+
+    <div class="position" *ngIf="component[1]">
+      <div class="placing">
+        <p>Оберіть дату і час:</p>
+
+        <input type="date" class="form date" [(ngModel)]="queue.data" (input)="validTime()">
+
+        <select class="form" [(ngModel)]="queue.time" (input)="validTime()">
+          <option *ngFor="let time of times">{{time}}</option>
+        </select>
+      </div>
+      <div class="buttons">
+        <button (click)="back(0)">Назад</button>
+        <button (click)="next(2)" [disabled]="!validationDate() || queue.time === ''">Далі</button>
+      </div>
+    </div>
+
+    <div class="position" *ngIf="component[2]">
+      <div class="placing">
+        <input [(ngModel)]="queue.name" type="text" placeholder="ім'я" class="form">
+        <input [(ngModel)]="queue.surname" type="text" placeholder="прізвище" class="form">
+        <input [(ngModel)]="queue.middleName" type="text" placeholder="по батькові" class="form">
+        <input [(ngModel)]="queue.email" type="text" placeholder="пошта" class="form">
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">+380</span>
+            <input type="text" class="form-control" placeholder="(**) ** ** ***" aria-describedby="basic-addon1"
+                   [(ngModel)]="queue.phoneNumber">
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button (click)="back(1)">Назад</button>
+        <button
+          (click)="next(3)"
+          [disabled]="queue.name === ''
+          || queue.surname === ''
+          || queue.middleName === ''
+          || queue.email === ''
+          || queue.phoneNumber === ''">
+          Далі
+        </button>
+      </div>
+    </div>
+
+    <div class="position" *ngIf="component[3]">
+      <div class="specPosition">
+        <ul class="list-group noneList-group">
+          <li class="list-group-item noneList">ПІБ:</li>
+          <li class="list-group-item noneList">Пошта:</li>
+          <li class="list-group-item noneList">Номер:</li>
+          <li class="list-group-item noneList">Операція:</li>
+          <li class="list-group-item noneList">Дата:</li>
+          <li class="list-group-item noneList">Час:</li>
+        </ul>
+        <ul class="list-group">
+          <li class="list-group-item">{{queue.surname}} {{queue.name}} {{queue.middleName}}</li>
+          <li class="list-group-item">{{queue.email}}</li>
+          <li class="list-group-item">+380{{queue.phoneNumber}}</li>
+          <li class="list-group-item">{{getService(queue.service)}}</li>
+          <li class="list-group-item">{{queue.data}}</li>
+          <li class="list-group-item">{{queue.time}}</li>
+        </ul>
+      </div>
+
+      <div class="checks">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" [(ngModel)]="isSwitchOn1">
+          <label class="custom-control-label" for="customSwitch1">Врахуйте, будь ласка, що у випадку запізнення Ваш візит буде скасовано!</label>
+        </div>
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch2" [(ngModel)]="isSwitchOn2">
+          <label class="custom-control-label" for="customSwitch2">Врахуйте, будь ласка, що у випадку повітряної тривоги Ваш візит буде скасовано!</label>
+        </div>
+      </div>
+      <div class="buttons">
+        <button (click)="back(2)">Назад</button>
+        <button (click)="next(-1)" [disabled]="!isSwitchOn1 || !isSwitchOn2">Підтвердити</button>
+      </div>
+    </div>
+  </div>
+
+</div>

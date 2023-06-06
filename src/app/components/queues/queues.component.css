@@ -1,0 +1,93 @@
+.queues {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65vw;
+  max-width: 1200px;
+  min-width: 300px;
+  background-color: rgba(255, 255, 255, 50%);
+}
+
+.card {
+  margin: 15px 10px;
+  border-radius: 40px;
+  width: 95%;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  text-align: center;
+  font-family: Bahnschrift;
+}
+
+.queue {
+  position: relative;
+  width: 90%;
+  max-height: 25vh;
+  padding: 35px 30px;
+}
+
+.last{
+  margin-bottom: 30px;
+}
+
+p {
+  font-family: "Arial";
+  padding: 0;
+}
+
+.h2 {
+  font-size: 18px;
+  margin: 0;
+  text-align: left;
+}
+
+.h1 {
+  font-size: 25px;
+  margin: 0 0 5px 0;
+  text-align: left;
+}
+
+.text {
+  text-align: left;
+  font-size: 15px;
+  padding: 0;
+  margin: 0 50px 0 0;
+}
+
+.noneBtn {
+  position: absolute;
+  right: 20px;
+  bottom: 7px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: auto;
+}
+
+.lable {
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  font-size: 11px;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .lable {
+    right: 40px;
+  }
+}
+
+img {
+  width: 40px;
+  height: auto;
+}
+
+hr {
+  width: 80%;
+  height: 1px;
+  background-color: white;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
