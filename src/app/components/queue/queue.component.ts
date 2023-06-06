@@ -29,7 +29,7 @@ export class QueueComponent implements OnInit {
     const currentDate = new Date();
     currentDate.setDate(new Date().getDate() + day);
     let filterArray = this.data.filter(el => new Date(el.data).getDay() === currentDate.getDay());
-    return filterArray.sort((a, b) => a.time - b.time)
+    return filterArray.sort((a, b) => Number(a.time) - Number(b.time));
   }
 
 
