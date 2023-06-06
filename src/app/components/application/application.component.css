@@ -1,33 +1,4 @@
-.applicationForm {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 100vw;
-  min-height: 100vh;
-  background-color: rgb(240, 240, 240);
-}
 
-.component {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 60%;
-  min-height: 60vh;
-  max-width: 1000px;
-  min-width: 330px;
-  border-radius: 5px;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 60px;
-  width: 100%;
-  background-color: rgb(232, 93, 86);
-  border-radius: 5px 5px 0 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 .position {
   position: absolute;

@@ -49,16 +49,13 @@ button {
   font-size: 16px;
   font-family: Bahnschrift;
   color: white;
+  width: auto;
+  height: 30px;
 }
 
 button:active {
   background-color: rgb(216, 99, 93);
   color: white;
-}
-
-.buttons button {
-  width: auto;
-  height: 30px;
 }
 
 .queue {
