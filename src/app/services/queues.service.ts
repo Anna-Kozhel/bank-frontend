@@ -17,7 +17,7 @@ export class QueuesService {
   private currentProfile: IQueue = {checkNumber: "", data: "", email: "", middleName: "",name: "", phoneNumber: "", service: 0, surname: "", time: ""};
   private emailRequest: IEmailRequest = {to: "", subject: "", body: ""};
 
-  private email: string = 'angularsent@gmail.com';
+  private email: string = 'anna.kozhel.pm.2020@lpnu.ua';
   private password: string = '123456';
 
   stateQueue$ = this.stateQueue.asObservable();
@@ -40,7 +40,7 @@ export class QueuesService {
 
   async getProfile() {
     console.log(this.currentQueue)
-    this.currentProfile = this.currentQueue.find(el => el.email == "anna.kovalchuk@example.com") ||
+    this.currentProfile = this.currentQueue.find(el => el.email == this.email) ||
       {checkNumber: "", data: "", email: "", middleName: "",name: "", phoneNumber: "", service: 0, surname: "", time: ""};
     await this.getStreamProfile();
     return this.currentProfile;

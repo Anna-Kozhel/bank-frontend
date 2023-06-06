@@ -28,7 +28,8 @@ export class QueueComponent implements OnInit {
   divideDataByDate(day: number) {
     const currentDate = new Date();
     currentDate.setDate(new Date().getDate() + day);
-    return this.data.filter(el => new Date(el.data).getDay() === currentDate.getDay());
+    let filterArray = this.data.filter(el => new Date(el.data).getDay() === currentDate.getDay());
+    return filterArray.sort((a, b) => a.time - b.time)
   }
 
 
